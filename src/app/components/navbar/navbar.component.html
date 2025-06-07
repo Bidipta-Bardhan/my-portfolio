@@ -1,0 +1,31 @@
+<ng-container class="wrapper-first" *ngIf="screenWidth>850px">
+    <div class="header">
+    <div></div>
+    <div class="navbar-body">
+    <div class="nav-items" *ngFor="let item of navbar"
+    [class.active]="activeSection === item.id"
+    (click)="scrollToSection(item.id)">
+        {{item.value}}
+    </div>
+    </div>
+    <div class="contact">
+        <button type="button" class="contact-btn" (click)="scrollToSection('contact')">Contact Me</button>
+    </div>
+    </div>
+</ng-container>
+<ng-container class="wrapper-second" *ngIf="screenWidth <= 850">
+    <div class="mobile-nav">
+      <button class="menu-btn" *ngIf="!menuOpen" (click)="toggleMenu()">&#9776;</button>
+      <div class="menu-overlay" *ngIf="menuOpen">
+        <div class="close">
+        <button class="close-btn" (click)="toggleMenu()">&times;</button>
+    </div>
+        <div class="menu-items">
+          <div class="nav-items" *ngFor="let item of navbar" [class.active]="activeSection === item.id"
+          (click)="scrollToSection(item.id)">
+            {{ item.value }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>

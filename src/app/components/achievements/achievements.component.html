@@ -1,0 +1,35 @@
+<div class="achievements-container">
+    <h2 class="title">My Achievements</h2>
+    <div class="slider">
+    <div class="achievement-card" *ngFor="let achievement of achievements">
+        <div>
+        <i class="fa-solid fa-star" *ngFor="let star of [].constructor(5)"></i>
+    </div>
+        
+        <p class="achievement-text">{{ achievement.description }}</p>
+        <div class="profile d-flex">
+            <img [src]="achievement.image" alt="{{ achievement.name }}" class="profile-img">
+            <div class="position">
+                <div class="name">{{ achievement.name }}</div>
+                <div class="role">{{ achievement.position }}</div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="achievement-card" *ngFor="let achievement of achievements">
+        <div>
+        <i class="fa-solid fa-star" *ngFor="let star of [].constructor(5)"></i>
+    </div>
+        
+        <p class="achievement-text">{{ achievement.description }}</p>
+        <div class="profile d-flex">
+            <img [src]="achievement.image" alt="{{ achievement.name }}" class="profile-img">
+            <div class="position">
+                <div class="name">{{ achievement.name }}</div>
+                <div class="role">{{ achievement.position }}</div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,58 @@
+<div class="contact-container">
+    <div class="contact-details">
+        <div class="contact-content">
+        <h3>Contact me for collaboration</h3>
+        <div class="reach-out">Reach out to me for discussions, lets collaborate and together create something amazing!</div>
+    </div>
+    <div class="social-icons">
+        <a href="tel:+916290481686" class="icon" aria-label="Phone" data-toggle="tooltip" title="+916290481686">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/bidipta-bardhan-04b383210/" class="icon" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Bidipta-Bardhan" class="icon" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/bidiptabardhan/" class="icon" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+    </div>
+    <div class="email-me">
+        <form [formGroup]="emailForm">
+        <div class="input-box">
+            
+            <div class="name">
+                <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name" placeholder="Enter your name"/>
+    <ng-container *ngIf="emailForm.get('name')?.invalid && emailForm.get('name')?.touched" >
+        @if(emailForm.get('name')?.hasError('required')){
+            <div class="error">Name is required</div>
+        }@else{
+            <div class="error">Name must be atleast 3 characters long</div>
+        }
+    </ng-container>
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+    <input id="email" type="email" formControlName="email" placeholder="Enter your email" >
+    <div  class="error"*ngIf="emailForm.get('email')?.invalid && emailForm.get('email')?.touched">
+        Enter a valid email address.
+    </div>
+            </div>
+        </div>
+        <div class="message">
+            <label for="message">Message</label>
+
+<textarea id="message" formControlName="message" name="message" placeholder="Enter your message" rows="4" cols="50">
+</textarea>
+<div class="error" *ngIf="emailForm.get('message')?.invalid && emailForm.get('message')?.touched">
+    Enter a message.
+</div>
+        </div>
+        <button class="submit-btn" (click)="onSubmit()">Submit</button>
+    </form>
+    </div>
+</div>
+<ng-toast  [width]="300" [position]="ToasterPosition.TOP_RIGHT"></ng-toast>

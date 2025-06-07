@@ -1,0 +1,39 @@
+<!-- <div class="experience-container">
+    <div *ngFor="let exp of experienceArray" class="experience-card">
+      <i [class]="exp.icon"></i>
+      <div class="experience-details">
+        <h3 class="job-role">{{ exp.jobRole }}</h3>
+        <h4 class="company-name">{{ exp.job }}</h4>
+        <p class="duration">{{ exp.duration }}</p>
+        <p class="description">{{ exp.description }}</p>
+      </div>
+    </div>
+  </div> -->
+  <div class="experience-container">
+    <div class="title mb-3">EXPERIENCE</div>
+    <div class="experience-content">
+      <div 
+        class="experience-card" 
+        *ngFor="let exp of experienceArray; let i=index"
+        (mouseenter)="hoveredIndex = i"
+        (mouseleave)="hoveredIndex = -1"
+        [class.hover]="hoveredIndex === i"
+      >
+        <div class="experience-details">
+          <!-- Default view (Not Hovered) -->
+          <ng-container *ngIf="hoveredIndex!==i">
+            <h3 class="company-name">{{exp.job}}</h3>
+            <h5 class="job-role">{{exp.jobRole}}</h5>
+            <p class="duration">{{exp.duration}}</p>
+            <div class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></div>
+          </ng-container>
+  
+          <!-- Hovered view (Show Description as Bullet Points) -->
+          <ul class="description" *ngIf="hoveredIndex === i">
+            <li *ngFor="let point of exp.descriptionPoints">{{ point }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

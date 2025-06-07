@@ -1,0 +1,21 @@
+<div class="skills-container">
+    <div class="title">SKILLS</div>
+    <div class="disclaimer">Below mentioned are the languages, frameworks, and tools I have worked with and have hands-on experience in
+    </div>
+    <div class="skill-body  d-flex">
+    <div class="skills-items" *ngFor="let skill of (screenWidth > 625 || showAllSkills ? skillsArray : skillsArray.slice(0,5))">
+        <div class="skill-img">
+            <img [src]="skill.image" alt="skill.title" class="skill-logo"
+            [ngStyle]="{'background-color': skill.title === 'AWS' ? '#1d3759': null}"/>
+        </div>
+            <div class="skill-text">
+                <div>{{skill.title}}</div>
+                <div class="skill-use">{{skill.use}}</div>
+            </div>
+    </div>
+     <!-- Show button only when screenWidth ≤ 625px -->
+     <button class="btn btn-link" *ngIf="skillsArray.length > 5 && screenWidth <= 625" (click)="toggleSkills()">
+        {{ showAllSkills ? 'SEE LESS' : 'SEE MORE' }}
+    </button>
+    </div>
+</div>    

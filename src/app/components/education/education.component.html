@@ -1,0 +1,15 @@
+<div class="education-container">
+<div class="title mb-3">EDUCATION</div>
+<div class="education-section">
+    <div *ngFor="let education of educationArray; let i = index" class="education-step">
+      <div class="circle">{{ education.duration }}</div>
+      <div *ngIf="i < educationArray.length - 1" class="line"></div> <!-- Line between circles -->
+      <div class="details">
+        <div class="course"><strong>{{ education.course }}</strong></div>
+        <div class="institute">{{ education.institute }}</div>
+        <div class="marks">{{ education.marks }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+  

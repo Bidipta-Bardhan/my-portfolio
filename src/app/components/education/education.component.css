@@ -1,0 +1,71 @@
+.education-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+  }
+  
+  .education-step {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .circle {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    background: #1e1e1e;
+    color: #ffb400;
+    font-weight: bold;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    z-index: 1;
+  }
+  
+  .line {
+    width: 0.188rem;
+    background-color: #202021;
+    position: absolute;
+    left: 1.875rem;
+    top: 4.375rem;
+    height: calc(100%);
+    z-index: 0;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+  
+  .course {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .institute{
+    color: #d4d9d4;
+  }
+  
+  .institute, .marks {
+    margin-top: 0.313rem;
+  }
+  .marks{
+    font-weight: bold;
+    color: #ffb400
+  }
+  @media screen and (max-width: 1000px) {
+    .circle, .line {
+      display: none;
+    }
+    .details{
+      border: 1px solid #383f45;
+      width: 90%;
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+  }
+  

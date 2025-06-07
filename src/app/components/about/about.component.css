@@ -1,0 +1,69 @@
+.about-content-first,
+.about-content-second {
+    display: flex;
+    justify-content: space-between;
+}
+.about-content-first{
+    margin-bottom: 2rem;
+}
+
+.bidipta-img{
+    height: 25rem;
+    width: 25rem;
+    border-radius: 2rem;
+}
+.about-image{
+    margin: 0rem 1rem;
+}
+.about-text{
+    margin: 0rem 1rem;
+    font-size: 3rem;
+}
+.btn-container{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0rem;
+}
+.download-btn{
+    background-color: #2ab6f7;
+    color: black;
+    border: white
+}
+.scroll-btn{
+    background-color: #424445;
+    color: white;
+    border: white;
+}
+.about-second-wrapper{
+    display: flex;
+    justify-content: center;
+    background-color: #202021;
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.card-content{
+    font-size: 1.2rem;
+    width: 80%;
+}
+i{
+   margin: 0rem .25rem
+}
+.exp-no{
+    font-size: larger;
+    font-weight:bold;
+}
+.fa-plus{
+    color: #3b92e3;
+}
+
+@media screen and (max-width:850px) {
+ .about-image{
+    display: none;
+ }   
+
+}
+
+
+
+

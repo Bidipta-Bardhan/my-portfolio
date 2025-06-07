@@ -1,0 +1,89 @@
+.experience-card {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid #eaebe8;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    width: 28.125rem;
+    height: max-content;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  @media  screen and (max-width: 560px) {
+    .experience-card{
+      width: 90%;
+    }
+  }
+  @media  screen and (max-width: 986px) {
+    .experience-content{
+      flex-direction: column;
+    }
+  }
+  @media  screen and (min-width:1680px) {
+    .experience-card{
+      width: 30rem;
+    }
+  }
+  .company-name {
+    background: linear-gradient(90deg, #2ab6f7, #a9e30b, #ffb400);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .duration {
+    color: #ffb700;
+  }
+  
+  .experience-content {
+    display: flex;
+  }
+  
+  .read-more {
+    color: #2ab6f7;
+    cursor: pointer;
+  }
+  
+  .job-role {
+    color: #cecfcc;
+  }
+  
+  .experience-card.hover {
+    border: 4px solid #2ab6f7;
+    background: linear-gradient(45deg, #050d36 60%, #1946e6);
+  }
+  
+  /* Bullet Point Styling */
+  .description {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #cecfcc;
+    padding: 1rem;
+    list-style-type: square;
+    overflow: hidden;
+    animation: slideIn 0.3s ease-in;
+  }
+
+  
+  .description li:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  .description li::marker {
+    color: #2ab6f7; /* Change bullet color */
+    font-size: 1.2rem; /* Adjust bullet size */
+    font-weight: bold;
+}
+.experience-card.hover .description {
+  transform: translateX(0);
+}
+@keyframes slideIn {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}

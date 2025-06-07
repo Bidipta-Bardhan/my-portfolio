@@ -1,0 +1,39 @@
+.wrapper{
+    margin: 1.5rem;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+.section{
+    padding-bottom: 2.5rem;
+    
+}
+#achievments {
+    width: 100vw;
+    margin-left: -15%;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+@media screen and (max-width:1080px) {
+    .body{
+        width:100%;
+        margin:0 1rem;
+        
+    }
+    /* #navbar{
+        display: none;
+    } */
+    #achievments{
+        margin-left: -2rem;
+       
+    }
+}
+@media screen and (max-width:850px) {
+    #navbar{
+        padding: 0!important;
+    }
+}

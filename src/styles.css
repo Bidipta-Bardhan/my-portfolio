@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: black;
+    color: white; /* Ensures text is visible */
+    margin: 0; /* Removes default margin */
+    height: 100vh; /* Ensures full height */
+  }
+  .btn{
+    padding: 0.7rem;
+    cursor: pointer;
+    border-radius: 0.7rem;
+    margin: 0rem 0.5rem;
+  }
+  .title{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar{
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track{
+background: transparent;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #8c8c8c;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background: #8c8c8c;
+  }

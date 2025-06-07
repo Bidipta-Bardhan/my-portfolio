@@ -1,0 +1,88 @@
+
+.title{
+    text-align: center;
+}
+.achievement-card {
+    flex: 0 0 25rem;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Pushes profile to the bottom */
+    height: 15.625rem;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.achievement-card:hover{
+    transform: perspective(6rem) translateZ(1rem);
+}
+.fa-solid{
+    padding-bottom: 0.25rem;
+}
+.slider {
+    display: flex;
+    gap: 1rem;
+    width: calc(26rem*14);
+    margin: 2rem auto;
+    animation: scroll 10s linear infinite;
+    
+    
+}
+
+.slider:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+.fa-star {
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+.profile{
+    margin-top:1rem;
+}
+.profile-img {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+   
+}
+
+.achievement-text{
+    flex-grow: 1;
+    color: #9aa7b3;
+}
+.name{
+    color:#ccd8e3;
+}
+.role{
+    color: #9aa7b3
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-26rem*7));
+    }
+}
+@media screen and (max-width:500px) {
+    .achievement-card{
+        flex: 0 0 20rem;
+        height: 18.75rem;
+    }
+    .slider{
+        width: calc(21rem*14);
+    }
+    @keyframes scroll {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-21rem*7));
+        }
+    }
+}
+
