@@ -1,5 +1,6 @@
 .wrapper{
     margin: 1.5rem;
+    height: 100vh;
 }
 .body{
     display: flex;
@@ -20,7 +21,7 @@
 }
 @media screen and (max-width:1080px) {
     .body{
-        width:100%;
+        width:auto;
         margin:0 1rem;
         
     }

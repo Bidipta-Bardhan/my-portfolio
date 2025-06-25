@@ -14,7 +14,7 @@ export class SkillsComponent implements OnInit{
     { title: 'TypeScript', image: 'https://cdn.simpleicons.org/typescript', use: 'Language' },
     { title: 'JavaScript', image: 'https://cdn.simpleicons.org/javascript', use: 'Language' },
     { title: 'HTML', image: 'https://cdn.simpleicons.org/html5', use: 'Markup Language' },
-    { title: 'CSS', image: 'https://cdn.simpleicons.org/css3', use: 'Stylesheet Language' },
+    { title: 'CSS', image: 'assets/svg/css3-brands.svg', use: 'Stylesheet Language' },
     { title: 'Bootstrap', image: 'https://cdn.simpleicons.org/bootstrap', use: 'UI Libraries' },
     { title: 'Angular Material', image: 'favicon.ico',use: 'UI Libraries' }, 
     { title: 'C++', image: 'https://cdn.simpleicons.org/cplusplus', use: 'Language' },
