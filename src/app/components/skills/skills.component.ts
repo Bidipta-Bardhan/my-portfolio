@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -9,6 +9,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent implements OnInit{
+  @ViewChild('toggleBtn') toggleBtn !:ElementRef
   skillsArray = [
     { title: 'Angular', image: 'favicon.ico', use: 'Framework' },
     { title: 'TypeScript', image: 'https://cdn.simpleicons.org/typescript', use: 'Language' },
@@ -39,6 +40,11 @@ export class SkillsComponent implements OnInit{
 
   toggleSkills() {
     this.showAllSkills = !this.showAllSkills;
+    setTimeout(() => {
+      if (this.toggleBtn && this.toggleBtn.nativeElement) {
+        this.toggleBtn.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 0);
   }
 
 }

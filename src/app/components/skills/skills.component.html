@@ -14,7 +14,7 @@
             </div>
     </div>
      <!-- Show button only when screenWidth ≤ 625px -->
-     <button class="btn btn-link" *ngIf="skillsArray.length > 5 && screenWidth <= 625" (click)="toggleSkills()">
+     <button #toggleBtn class="btn btn-link" *ngIf="skillsArray.length > 5 && screenWidth <= 625" (click)="toggleSkills()">
         {{ showAllSkills ? 'SEE LESS' : 'SEE MORE' }}
     </button>
     </div>
