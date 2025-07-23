@@ -17,7 +17,7 @@ export class AboutComponent {
     }
   }
   downloadResume() {
-    const resumeUrl = 'assets/BidiptaBardhanResumeSDE_updated.pdf';
+    const resumeUrl = 'assets/Bidipta_Bardhan_Software_Engineer_Resume.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Bidipta_Resume.pdf'; // The filename when downloaded

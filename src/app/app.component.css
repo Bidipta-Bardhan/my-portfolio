@@ -1,6 +1,7 @@
 .wrapper{
     margin: 1.5rem;
-    height: 100vh;
+    height: auto;
+    overflow: unset;
 }
 .body{
     display: flex;
